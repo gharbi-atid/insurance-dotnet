@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ForumService\ForumCommentService.cs" />
+    <Compile Include="ForumService\ForumTopicService.cs" />
     <Compile Include="InterviewService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

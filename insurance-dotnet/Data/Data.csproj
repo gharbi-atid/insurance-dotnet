@@ -70,13 +70,9 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="insurancedbContext.cs" />
-    <Compile Include="Migrations\201712072354494_m1.cs" />
-    <Compile Include="Migrations\201712072354494_m1.Designer.cs">
-      <DependentUpon>201712072354494_m1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712080141503_m2.cs" />
-    <Compile Include="Migrations\201712080141503_m2.Designer.cs">
-      <DependentUpon>201712080141503_m2.cs</DependentUpon>
+    <Compile Include="Migrations\201712080929589_v1.cs" />
+    <Compile Include="Migrations\201712080929589_v1.Designer.cs">
+      <DependentUpon>201712080929589_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mapping\actualitycommentMap.cs" />
@@ -117,11 +113,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712072354494_m1.resx">
-      <DependentUpon>201712072354494_m1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712080141503_m2.resx">
-      <DependentUpon>201712080141503_m2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712080929589_v1.resx">
+      <DependentUpon>201712080929589_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

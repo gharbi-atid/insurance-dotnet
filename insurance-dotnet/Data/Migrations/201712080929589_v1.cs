@@ -3,7 +3,7 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class m1 : DbMigration
+    public partial class v1 : DbMigration
     {
         public override void Up()
         {
@@ -13,6 +13,9 @@ namespace Data.Migrations
                     {
                         id = c.Int(nullable: false, identity: true),
                         dateInterview = c.DateTime(nullable: false, precision: 0),
+                        experience = c.String(unicode: false),
+                        diplome = c.String(unicode: false),
+                        motivations = c.String(unicode: false),
                         idstagiaire_id = c.Int(),
                     })
                 .PrimaryKey(t => t.id)

@@ -1,0 +1,138 @@
+﻿@model Data.Models.forumtopic
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+
+<div class="section section-contents section-contact section-pad">
+    <div class="container">
+        <div class="content row">
+            <div class="row">
+                <div class="col-md-8">
+                    @{Html.RenderAction("Index", "ForumTopic");}
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="box-flat pd-x3">
+                            <div class="form-horizontal">
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
+                                   
+                                     <div class="col-md-10">
+                                        @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.image, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.image, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                               
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Create" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <!-- // -->
+                <div class="col-md-4">
+
+                    <div class="sidebar-right">
+                        <div class="wgs-box boxed boxed-flat">
+                            <div class="wgs-content">
+                                <h5>How Insurance Protects You</h5>
+                                <p>Insurance helps offer financial protection to sed do eiusmod tempor incidint ut labore magna aliqua quis nostrud.</p>
+                                <p><a href="#" class="btn-link link-arrow-sm">Visit all insurances sevices</a></p>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="wgs-box boxed boxed-flat">
+                            <div class="wgs-content">
+                                <h5>Frequently Asked Questions</h5>
+                                <p>Common questions about personal, commercial, autos and our insurance services.</p>
+                                <p><a href="#" class="btn-link link-arrow-sm">Read Faq's</a></p>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="wgs-box boxed light bg-primary">
+                            <div class="wgs-content">
+                                <h3>Get a Quote</h3>
+                                <p>Age 50+? Discover great savings and benefits with the Insurance Pro from Us.</p>
+                                <a href="#" class="btn btn-light btn-alt">Start Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

@@ -212,6 +212,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ForumCommentController.cs" />
+    <Compile Include="Controllers\ForumTopicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InterviewController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -289,9 +291,18 @@
     <Content Include="Views\Interview\Delete.cshtml" />
     <Content Include="Views\Interview\Details.cshtml" />
     <Content Include="Views\Interview\Edit.cshtml" />
+    <Content Include="Views\Shared\_mytemplate.cshtml" />
+    <Content Include="Views\Shared\ViewPage1.cshtml" />
+    <Content Include="Views\ForumTopic\Index.cshtml" />
+    <Content Include="Views\ForumTopic\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\mytemplate\css\" />
+    <Folder Include="Content\mytemplate\fonts\" />
+    <Folder Include="Content\mytemplate\image\" />
+    <Folder Include="Content\mytemplate\js\" />
+    <Folder Include="Views\ForumComment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
