@@ -11,5 +11,6 @@ namespace Data.Models
         public int nbVue { get; set; }
         public string title { get; set; }
         public byte[] user { get; set; }
+        public virtual ICollection<forumcomment> comments { get; set; }
     }
 }

@@ -13,6 +13,9 @@ namespace Data.Models
         public int booked { get; set; }
         public string description { get; set; }
         public string name { get; set; }
+        public int places { get; set; }
         public double price { get; set; }
+        public string ImageName { get; set; }
+
     }
 }

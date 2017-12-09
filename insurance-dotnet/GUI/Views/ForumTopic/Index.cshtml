@@ -66,6 +66,7 @@
         <div class="row">
             <div class="col-md-9 col-sm-8 res-s-bttm">
                 <h4><a  asp-controller="ForumTopic" asp-action="Details" asp-route-id="modelItem => item.id">@Html.DisplayFor(modelItem => item.title)</a></h4>
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
                 <p class="lead">Covers damage to your auto</p>
                 <p>If you're at fault in an accident, vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et molestias. Dolor sit amet, consectetur adipiscing elit.</p>
             </div>

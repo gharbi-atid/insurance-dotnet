@@ -30,8 +30,9 @@ namespace GUI.Controllers
 
         // POST: ForumComment/Create
         [HttpPost]
-        public ActionResult Create(forumcomment p)
+        public ActionResult Create( forumcomment p)
         {
+           // p.topic_id = topic;
             service.Add(p);
             service.Commit();
 
