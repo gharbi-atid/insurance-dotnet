@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Data.Models.forumtopic>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/ViewPage1.cshtml";
+}
+<style>
+    .post .comments {
+        border-bottom: solid 1px #f1f1f1;
+        padding: 18px 0 25px 0;
+        text-align: center;
+    }
+
+
+        .post .comments .commentbg {
+            background-color: #bdc3c7;
+            border-radius: 2px;
+            display: inline-block;
+            padding: 12px 17px;
+            color: #ffffff;
+            font-size: 14px;
+            font-family: 'Open Sans Bold', sans-serif;
+            position: relative;
+        }
+
+            .post .comments .commentbg .mark {
+                width: 11px;
+                height: 11px;
+                background-color: #bdc3c7;
+                position: absolute;
+                bottom: 0;
+                left: 43%;
+                margin-bottom: -5px;
+                transform: rotate(45deg);
+                -ms-transform: rotate(45deg); /* IE 9 */
+                -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+            }
+
+    .post .views {
+        border-bottom: solid 1px #f1f1f1;
+        color: #9da6aa;
+        font-size: 12px;
+        font-family: 'Open Sans Regular', sans-serif;
+        text-align: center;
+        line-height: 29px;
+    }
+
+        .post .views i {
+            font-size: 14px;
+        }
+
+    .post .time {
+        color: #9da6aa;
+        font-size: 12px;
+        font-family: 'Open Sans Regular', sans-serif;
+        text-align: center;
+        line-height: 29px;
+    }
+
+        .post .time i {
+            font-size: 14px;
+        }
+</style>
+@foreach (var item in Model)
+{<div class="box-flat pd-x3">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 res-s-bttm">
+                <h4><a  asp-controller="ForumTopic" asp-action="Details" asp-route-id="modelItem => item.id">@Html.DisplayFor(modelItem => item.title)</a></h4>
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                <p class="lead">Covers damage to your auto</p>
+                <p>If you're at fault in an accident, vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et molestias. Dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="icon-box size-md icon-aside icon-inline">
+                <div class="postinfo pull-left">
+                    <div class="comments">
+                        <div class="commentbg">
+                            560
+                            <div class="mark"></div>
+                        </div>
+                    </div>
+                    <div class="views"><i class="fa fa-eye"></i> @Html.DisplayFor(modelItem => item.nbVue)</div>
+                    <div class="time"><i class="fa fa-clock-o"></i> 24 min</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>}

@@ -1,0 +1,140 @@
+﻿@model Data.Models.forumtopic
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+
+<div class="section section-contents section-contact section-pad">
+    <div class="container">
+        <div class="content row">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="box-flat pd-x3">
+                        <h4>@Html.DisplayFor(model => model.title)</h4>
+                        <p>@Html.DisplayFor(model => model.description)</p>
+                        <hr class="hr-sm">
+                        <div class="icon-box size-md icon-aside icon-inline">
+                            <em class="fa fa-motorcycle"></em>
+                        </div>
+                        <p class="small"><strong>Example:</strong> You motorcycle $1,000 for new, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    </div>
+                    @foreach (var item in Model.comments)
+                    {    <div class="box-flat pd-x3">
+                        
+                        <p>@Html.DisplayFor(model => item.description)</p>
+                        <hr class="hr-sm">
+                        <div class="icon-box size-md icon-aside icon-inline">
+                            <em class="fa fa-motorcycle"></em>
+                        </div>
+                        <p class="small"><strong>Example:</strong> You motorcycle $1,000 for new, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    </div>}
+                    @{
+                        Html.RenderAction("Create", "ForumComment");
+                    }
+                    
+                </div>
+                <!-- // -->
+                <div class="col-md-4">
+
+                    <div class="sidebar-right">
+                        <div class="wgs-box boxed boxed-flat">
+                            <div class="wgs-content">
+                                <h5>How Insurance Protects You</h5>
+                                <p>Insurance helps offer financial protection to sed do eiusmod tempor incidint ut labore magna aliqua quis nostrud.</p>
+                                <p><a href="#" class="btn-link link-arrow-sm">Visit all insurances sevices</a></p>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="wgs-box boxed boxed-flat">
+                            <div class="wgs-content">
+                                <h5>Frequently Asked Questions</h5>
+                                <p>Common questions about personal, commercial, autos and our insurance services.</p>
+                                <p><a href="#" class="btn-link link-arrow-sm">Read Faq's</a></p>
+                            </div>
+                        </div>
+                        <!-- // -->
+                        <div class="wgs-box boxed light bg-primary">
+                            <div class="wgs-content">
+                                <h3>Get a Quote</h3>
+                                <p>Age 50+? Discover great savings and benefits with the Insurance Pro from Us.</p>
+                                <a href="#" class="btn btn-light btn-alt">Start Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End Content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nbVue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nbVue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
