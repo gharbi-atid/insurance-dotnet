@@ -70,13 +70,9 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="insurancedbContext.cs" />
-    <Compile Include="Migrations\201712072354494_m1.cs" />
-    <Compile Include="Migrations\201712072354494_m1.Designer.cs">
-      <DependentUpon>201712072354494_m1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712080141503_m2.cs" />
-    <Compile Include="Migrations\201712080141503_m2.Designer.cs">
-      <DependentUpon>201712080141503_m2.cs</DependentUpon>
+    <Compile Include="Migrations\201712091635438_v0.cs" />
+    <Compile Include="Migrations\201712091635438_v0.Designer.cs">
+      <DependentUpon>201712091635438_v0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mapping\actualitycommentMap.cs" />
@@ -117,11 +113,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712072354494_m1.resx">
-      <DependentUpon>201712072354494_m1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712080141503_m2.resx">
-      <DependentUpon>201712080141503_m2.cs</DependentUpon>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712091635438_v0.resx">
+      <DependentUpon>201712091635438_v0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

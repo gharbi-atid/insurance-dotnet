@@ -17,7 +17,7 @@ namespace GUI.Models
             return userIdentity;
         }
     }
-
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()

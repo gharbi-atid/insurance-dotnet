@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -159,12 +167,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -227,6 +229,136 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\insuranceTemplate\css\style.css" />
+    <Content Include="Content\insuranceTemplate\css\vendor.bundle.css" />
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\insuranceTemplate\image\arrow-next-g.png" />
+    <Content Include="Content\insuranceTemplate\image\arrow-next-w.png" />
+    <Content Include="Content\insuranceTemplate\image\arrow-prev-g.png" />
+    <Content Include="Content\insuranceTemplate\image\arrow-prev-w.png" />
+    <Content Include="Content\insuranceTemplate\image\banner-auto.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-blog.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-commercial.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-contact.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-homeowner.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-inner.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-life.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-personal.jpg" />
+    <Content Include="Content\insuranceTemplate\image\banner-renter.jpg" />
+    <Content Include="Content\insuranceTemplate\image\favicon.png" />
+    <Content Include="Content\insuranceTemplate\image\loading.html" />
+    <Content Include="Content\insuranceTemplate\image\logo.png" />
+    <Content Include="Content\insuranceTemplate\image\logo_white.png" />
+    <Content Include="Content\insuranceTemplate\image\news-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-lg-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-thumb-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-thumb-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-thumb-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\news-thumb-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-a.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-b.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c1.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c2.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c3.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c4.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c5.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c6.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c7.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-c8.jpg" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-d.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-e.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-f.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-g.png" />
+    <Content Include="Content\insuranceTemplate\image\partner-logo-h.png" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-e.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-f.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-g.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-h.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-i.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-j.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-k.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-l.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-m.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-n.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-o.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-p.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-q.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-r.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-s.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-md-t.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-e.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sd-f.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sm-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sm-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sm-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-e.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-f.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-g.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-h.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-i.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-j.jpg" />
+    <Content Include="Content\insuranceTemplate\image\photo-sq-k.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-air-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-air-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-aircraft.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-auto.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-dark.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-dark2.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-life.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-personal.jpg" />
+    <Content Include="Content\insuranceTemplate\image\plx-quotes.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-a1.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-a2.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-a3.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-a4.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d1.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d2.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d3.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d4.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d5.jpg" />
+    <Content Include="Content\insuranceTemplate\image\slider-d6.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-pt-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-pt-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-pt-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-a.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-b.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-c.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-d.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-e.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-f.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-g.jpg" />
+    <Content Include="Content\insuranceTemplate\image\team-sq-h.jpg" />
+    <Content Include="Content\insuranceTemplate\js\gmaps.js" />
+    <Content Include="Content\insuranceTemplate\js\jquery.bundle.js" />
+    <Content Include="Content\insuranceTemplate\js\script.js" />
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -238,6 +370,51 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-bold-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-bold-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-bold-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-bold-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-bold-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-light-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-light-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-light-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-light-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-light-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-regular-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-regular-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-regular-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-regular-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-regular-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-semibold-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-semibold-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-semibold-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-semibold-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\poppins\poppins-semibold-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-bold-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-bold-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-bold-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-bold-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-bold-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-light-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-light-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-light-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-light-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-light-webfontd41d.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-regular-webfont.eot" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-regular-webfont.ttf" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-regular-webfont.woff" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-regular-webfont.woff2" />
+    <Content Include="Content\insuranceTemplate\fonts\roboto\roboto-regular-webfontd41d.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -250,7 +427,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -263,7 +442,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -289,6 +467,8 @@
     <Content Include="Views\Interview\Delete.cshtml" />
     <Content Include="Views\Interview\Details.cshtml" />
     <Content Include="Views\Interview\Edit.cshtml" />
+    <Content Include="Views\Shared\_insurancetemplate.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
