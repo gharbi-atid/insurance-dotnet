@@ -70,17 +70,13 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="insurancedbContext.cs" />
-    <Compile Include="Migrations\201712092025150_v0.cs" />
-    <Compile Include="Migrations\201712092025150_v0.Designer.cs">
-      <DependentUpon>201712092025150_v0.cs</DependentUpon>
+    <Compile Include="Migrations\201712101637243_v0.cs" />
+    <Compile Include="Migrations\201712101637243_v0.Designer.cs">
+      <DependentUpon>201712101637243_v0.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712092029520_v1.cs" />
-    <Compile Include="Migrations\201712092029520_v1.Designer.cs">
-      <DependentUpon>201712092029520_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712092048116_v2.cs" />
-    <Compile Include="Migrations\201712092048116_v2.Designer.cs">
-      <DependentUpon>201712092048116_v2.cs</DependentUpon>
+    <Compile Include="Migrations\201712101639345_v2.cs" />
+    <Compile Include="Migrations\201712101639345_v2.Designer.cs">
+      <DependentUpon>201712101639345_v2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mapping\actualitycommentMap.cs" />
@@ -134,14 +130,11 @@
     <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712092025150_v0.resx">
-      <DependentUpon>201712092025150_v0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712101637243_v0.resx">
+      <DependentUpon>201712101637243_v0.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712092029520_v1.resx">
-      <DependentUpon>201712092029520_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712092048116_v2.resx">
-      <DependentUpon>201712092048116_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712101639345_v2.resx">
+      <DependentUpon>201712101639345_v2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

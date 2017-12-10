@@ -3,16 +3,16 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class v2 : DbMigration
+    public partial class v0 : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Interviews", "etat", c => c.String(unicode: false));
+            DropColumn("insurancedb.actuality", "DateDebut");
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Interviews", "etat");
+            AddColumn("insurancedb.actuality", "DateDebut", c => c.DateTime(nullable: false, precision: 0));
         }
     }
 }
