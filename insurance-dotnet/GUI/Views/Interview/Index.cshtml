@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_insurancetemplate.cshtml";
 }
 
 <h2>Index</h2>
@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.motivations)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
         <th></th>
     </tr>
 
@@ -40,6 +43,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.motivations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

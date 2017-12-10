@@ -14,5 +14,6 @@ namespace Data.Models
         public string experience { get; set; }
         public string diplome { get; set; }
         public string motivations { get; set; }
+        public string etat { get; set; }
     }
 }

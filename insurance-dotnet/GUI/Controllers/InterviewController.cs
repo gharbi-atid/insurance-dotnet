@@ -38,6 +38,7 @@ namespace GUI.Controllers
         {
             try
             {
+                i.etat = "Pending";
                 iss.Add(i);
                 iss.Commit();
 
@@ -89,5 +90,8 @@ namespace GUI.Controllers
             iss.Commit();
             return RedirectToAction("Index");
         }
+
+
+
     }
 }
