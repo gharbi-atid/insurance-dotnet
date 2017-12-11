@@ -1,0 +1,65 @@
+﻿@model Data.Models.Interview
+
+@{
+    ViewBag.Title = "Reject";
+    Layout = "~/Views/Shared/_insurancetemplate.cshtml";
+}
+
+<h2>Reject</h2>
+
+<h3>Are you sure you want to Reject this?</h3>
+<div>
+    <h4>Interview</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateInterview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateInterview)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diplome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diplome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motivations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motivations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Reject" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "IndexAdmin")
+        </div>
+    }
+</div>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Data.Models.Interview>
+
+@{
+    ViewBag.Title = "IndexAdmin";
+    Layout = "~/Views/Shared/_insurancetemplate.cshtml";
+}
+
+<h2>IndexAdmin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dateInterview)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.experience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diplome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motivations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateInterview)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.experience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diplome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motivations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.ActionLink("Accept", "Accept", new { id=item.id }) |
+            @Html.ActionLink("Reject", "Reject", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
