@@ -24,7 +24,7 @@ namespace Data.Models.Mapping
                 .HasMaxLength(255);
 
             // Table & Column Mappings
-            this.ToTable("car", "insurancedb");
+            this.ToTable("car", "dbo");
             this.Property(t => t.idCar).HasColumnName("idCar");
             this.Property(t => t.contract_refContract).HasColumnName("contract_refContract");
             this.Property(t => t.marque).HasColumnName("marque");

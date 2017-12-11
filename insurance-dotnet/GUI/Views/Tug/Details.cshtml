@@ -1,0 +1,83 @@
+﻿@model Domain.Tug
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_insurancetemplate.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tug</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.reference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTug }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

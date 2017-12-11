@@ -56,7 +56,7 @@ namespace Data.Models.Mapping
                 .HasMaxLength(255);
 
             // Table & Column Mappings
-            this.ToTable("user", "insurancedb");
+            this.ToTable("user", "dbo");
             this.Property(t => t.USER_TYPE).HasColumnName("USER_TYPE");
             this.Property(t => t.id).HasColumnName("id");
             this.Property(t => t.Adresse).HasColumnName("Adresse");
