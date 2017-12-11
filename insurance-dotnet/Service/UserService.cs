@@ -16,10 +16,10 @@ namespace Service
     public UserService() : base(utw)
         {
         }
-        public IEnumerable<user> afficher()
+        public user authentification(string login, string password)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create
-            ("http://localhost:18080/insurance-javaee-web/insurance/reclamation");
+            ("http://localhost:18080/insurance-javaee-web/insurance/user?login="+login+"&&password="+password);
             request.Method = "GET";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
@@ -32,15 +32,16 @@ namespace Service
                 }
             }
             var objs = JsonConvert.DeserializeObject<List<user>>(content);
-            List<user> liste = new List<user>();
-            foreach (user r in objs)
+            if (objs.Count == 0)
             {
-                user rec = new user();
+                return null;
+            }else
+            {
+                user myObj = objs[0];
 
-                rec = r;
-                liste.Add(rec);
+                return myObj;
             }
-            return liste;
+            
         }
 
 

@@ -5,10 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using Data.Models;
 using ServiceStack;
+using Service;
 namespace GUI.Controllers
 {
     public class HomeController : Controller
     {
+        UserService us = new UserService();   
         public ActionResult Index()
         {
             return View();
@@ -22,10 +24,24 @@ namespace GUI.Controllers
         [HttpPost]
         public ActionResult Login(user x)
         {
-            string json;
-            var client = new JsonServiceClient("");
+            user a = us.authentification(x.login, x.password);
 
-            return Redirect("~/Interview");
+
+
+            if (a == null) {
+                return View();
+            }
+            else if (a.role.Equals("admin"))
+            {
+                Session["user"] = a;
+                return Redirect("~/Interview/IndexAdmin");
+            }
+            else
+            {
+                Session["user"] = a;
+                return Redirect("~/Interview");
+            }
+
 
         }
 

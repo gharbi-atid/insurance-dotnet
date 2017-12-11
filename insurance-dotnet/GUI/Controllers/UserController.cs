@@ -14,8 +14,7 @@ namespace cgaFinaldotNet.Controllers
         // GET: User
         public ActionResult Index()
         {
-            IEnumerable<user> liste = rs.afficher();
-            return View(liste);
+            return View();
         }
 
         // GET: User/Details/5

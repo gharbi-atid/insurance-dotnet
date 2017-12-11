@@ -44,6 +44,7 @@ namespace GUI.Controllers
         {
             try
             {
+                i.idstagiaire = Session["user"] as user;
                 i.etat = "Pending";
                 iss.Add(i);
                 iss.Commit();
