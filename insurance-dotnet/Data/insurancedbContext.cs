@@ -43,6 +43,8 @@ namespace Data
         public DbSet<testimony> testimonies { get; set; }
         public DbSet<user> users { get; set; }
         public DbSet<Interview> Interview { get; set; }
+        public DbSet<Rendezvous> Rendezvous { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

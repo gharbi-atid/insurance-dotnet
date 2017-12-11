@@ -230,6 +230,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InterviewController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RendezvousController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -488,6 +489,10 @@
     <Content Include="Views\Interview\Accept.cshtml" />
     <Content Include="Views\Interview\Reject.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Rendezvous\Index.cshtml" />
+    <Content Include="Views\Rendezvous\Create.cshtml" />
+    <Content Include="Views\Rendezvous\Edit.cshtml" />
+    <Content Include="Views\Rendezvous\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
