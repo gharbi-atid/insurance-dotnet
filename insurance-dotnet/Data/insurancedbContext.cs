@@ -3,13 +3,15 @@ using System.Data.Entity.Infrastructure;
 using Data.Models.Mapping;
 
 using Data.Models;
-using Domain;
-using Data.Conventionn;
-
 namespace Data
 {
     public partial class insurancedbContext : DbContext
     {
+        static insurancedbContext()
+        {
+            Database.SetInitializer<insurancedbContext>(null);
+        }
+
         public insurancedbContext()
             : base("Name=insurancedbContext")
         {
@@ -41,7 +43,9 @@ namespace Data
         public DbSet<testimony> testimonies { get; set; }
         public DbSet<user> users { get; set; }
         public DbSet<Interview> Interview { get; set; }
-        public DbSet<Tug> tugs { get; set; }
+        public DbSet<Rendezvous> Rendezvous { get; set; }
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -70,6 +74,7 @@ namespace Data
             modelBuilder.Configurations.Add(new surveyvoteMap());
             modelBuilder.Configurations.Add(new testimonyMap());
             modelBuilder.Configurations.Add(new userMap());
+
         }
     }
 }

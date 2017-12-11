@@ -20,6 +20,12 @@ namespace GUI.Controllers
             return View(iss.GetAll());
         }
 
+        // GET: Interview/IndexAdmin
+        public ActionResult IndexAdmin()
+        {
+            return View(iss.GetAll().Where( e => e.etat.Equals("Pending")  ) );
+        }
+
         // GET: Interview/Details/5
         public ActionResult Details(int id)
         {
@@ -38,6 +44,7 @@ namespace GUI.Controllers
         {
             try
             {
+                i.etat = "Pending";
                 iss.Add(i);
                 iss.Commit();
 
@@ -89,5 +96,46 @@ namespace GUI.Controllers
             iss.Commit();
             return RedirectToAction("Index");
         }
+
+        // GET: Interview/Accept/5
+        public ActionResult Accept(int id)
+        {
+            Interview inter = iss.GetById(id);
+            return View(inter);
+        }
+
+        // POST: Interview/Accept/5
+        [HttpPost]
+        public ActionResult Accept(int id, Interview inter)
+        {
+            Interview c1 = new Interview();
+            c1 = iss.GetById(id);
+            c1.etat = "Accepted";
+            iss.Update(c1);
+            iss.Commit();
+            return RedirectToAction("IndexAdmin");
+        }
+
+
+
+        // GET: Interview/Reject/5
+        public ActionResult Reject(int id)
+        {
+            Interview inter = iss.GetById(id);
+            return View(inter);
+        }
+
+        // POST: Interview/Accept/5
+        [HttpPost]
+        public ActionResult Reject(int id, Interview inter)
+        {
+            Interview c1 = new Interview();
+            c1 = iss.GetById(id);
+            c1.etat = "Rejected";
+            iss.Update(c1);
+            iss.Commit();
+            return RedirectToAction("IndexAdmin");
+        }
+
     }
 }

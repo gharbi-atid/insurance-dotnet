@@ -15,9 +15,22 @@ namespace Data.Models.Mapping
             this.Property(t => t.idActuality)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
+            this.Property(t => t.titre)
+              .HasMaxLength(255);
+
+            this.Property(t => t.description)
+                .HasMaxLength(255);
+
+
+
+
+
             // Table & Column Mappings
             this.ToTable("actuality", "insurancedb");
             this.Property(t => t.idActuality).HasColumnName("idActuality");
+            this.Property(t => t.titre).HasColumnName("titre");
+            this.Property(t => t.description).HasColumnName("description");
+            this.Property(t => t.date).HasColumnName("Date");
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿@model Data.Models.Interview
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Reject";
     Layout = "~/Views/Shared/_insurancetemplate.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Reject</h2>
 
+<h3>Are you sure you want to Reject this?</h3>
 <div>
     <h4>Interview</h4>
     <hr />
@@ -43,9 +44,22 @@
             @Html.DisplayFor(model => model.motivations)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etat)
+        </dd>
+
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Reject" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "IndexAdmin")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
