@@ -24,6 +24,11 @@ namespace GUI.Controllers
             return View();
         }
 
+        public ActionResult IndexCalendar()
+        {
+            return View(rs.GetAll());
+        }
+
         // GET: Rendezvous/Create
         public ActionResult Create()
         {

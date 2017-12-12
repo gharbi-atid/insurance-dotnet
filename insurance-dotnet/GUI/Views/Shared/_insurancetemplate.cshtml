@@ -10,18 +10,9 @@
     <link rel="icon" href="@Url.Content("~/Content/insuranceTemplate/image/favicon.png")" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/insuranceTemplate/css/vendor.bundle.css")">
     <link id="style-css" rel="stylesheet" type="text/css" href="@Url.Content("~/Content/insuranceTemplate/css/style.css")">
-    <script type="text/javascript">
-        function InitializeMap() {
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
-            var myOptions = {
-                zoom: 8,
-                center: latlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
-        }
-        window.onload = InitializeMap;
-    </script>
+    <link id="style-css" rel="stylesheet" type="text/css" href="@Url.Content("~/Content/insuranceTemplate/css/fullcalendar.min.css")">
+
+    <script src="@Url.Content("~/Content/insuranceTemplate/js/jquery.min.js")"></script>
 </head>
 <body class="site-body style-v1">
     <header class="site-header header-s1 is-sticky">
@@ -130,119 +121,114 @@
             </div>
         </div>
     </header>
-    <div class="section section-contents section-contact section-pad">
+    <div style="width: 900px; margin: auto; margin-bottom: 20px;">
+        @RenderBody()
+    </div>
+    <div class="footer-widget section-pad-md">
         <div class="container">
-            <div class="content row">
-                <div class="contact-content row"> 
-                        @RenderBody()
+            <div class="row">
+                <div class="widget-row row">
+                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
+                        <!-- Each Widget -->
+                        <div class="wgs wgs-footer wgs-menu">
+                            <h5 class="wgs-title">Our Services</h5>
+                            <div class="wgs-content">
+                                <ul class="menu">
+                                    <li><a href="#">Homeowner's insurance</a></li>
+                                    <li><a href="#">Personal Insurance</a></li>
+                                    <li><a href="#">Auto Insurance</a></li>
+                                    <li><a href="#">Commercial Insurance</a></li>
+                                    <li><a href="#">Life &amp; Health Insurance</a></li>
+                                    <li><a href="#">Renter's Insurance</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Widget -->
+                    </div>
+                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
+                        <!-- Each Widget -->
+                        <div class="wgs wgs-footer wgs-menu">
+                            <h5 class="wgs-title">Quick Links</h5>
+                            <div class="wgs-content">
+                                <ul class="menu">
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="testimonial.html">Testimonial</a></li>
+                                    <li><a href="services.html">Client Resources</a></li>
+                                    <li><a href="news.html">Our Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Widget -->
+                    </div>
+                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
+                        <!-- Each Widget -->
+                        <div class="wgs wgs-footer">
+                            <h5 class="wgs-title">Proudly Serving</h5>
+                            <div class="wgs-content">
+                                <ul>
+                                    <li>Brooklyn, NY</li>
+                                    <li>Bushwick, NY</li>
+                                    <li>Long Beach, CA</li>
+                                    <li>Los Alamitos, CA</li>
+                                    <li>New Jersey, NJ</li>
+                                    <li>Florida, FL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Widget -->
+                    </div>
+                    <div class="footer-col col-md-3 col-sm-6">
+                        <!-- Each Widget -->
+                        <div class="wgs wgs-footer">
+                            <div class="wgs-content">
+                                <div class="footer-logo"><img src="image/logo.png" srcset="image/logo2x.png 2x" alt=""></div>
+                                <ul class="contact-info">
+                                    <li>
+                                        <span>Toll Free</span>: 800-123-5689<br>
+                                        <span>Phone</span>: 781-123-9865
+                                    </li>
+                                    <li><span>Fax</span>: 781-123-0011</li>
+                                    <li>
+                                        34 South Franklin Road <br>
+                                        Santa Ana, CA 8975, USA.
+                                    </li>
+                                </ul>
+                                <ul class="social social-v2">
+                                    <li><a href="#"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
+                                    <li><a href="#"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
+                                    <li><a href="#"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Widget -->
+                    </div>
+                </div><!-- Widget Row -->
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Widget -->
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="site-copy col-sm-7">
+                    <p>Copyright &copy; 2017 Insurance Pro Inc. License #1010155 <span class="sep"> . </span> <a href="#">Privacy Policy</a> <span class="sep"> . </span> <a href="#">Sitemap</a></p>
+                </div>
+                <div class="site-by col-sm-5 al-right">
+                    <p>Template Design &amp; Made <em class="fa fa-heart text-danger"></em> by <a href="http://softnio.com/" target="_blank">Softnio</a></p>
+                </div>
+                <div class="site-dclaim col-sm-12">
+                    <p class="small"><strong>Disclaimer:</strong> The material on this website is for demostration purpose only and is provided denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue. These cases are perfectly simple and easy to distinguish.</p>
                 </div>
             </div>
-         </div>
-     </div>
-                    <div class="footer-widget section-pad-md">
-                        <div class="container">
-                            <div class="row">
-                                <div class="widget-row row">
-                                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
-                                        <!-- Each Widget -->
-                                        <div class="wgs wgs-footer wgs-menu">
-                                            <h5 class="wgs-title">Our Services</h5>
-                                            <div class="wgs-content">
-                                                <ul class="menu">
-                                                    <li><a href="#">Homeowner's insurance</a></li>
-                                                    <li><a href="#">Personal Insurance</a></li>
-                                                    <li><a href="#">Auto Insurance</a></li>
-                                                    <li><a href="#">Commercial Insurance</a></li>
-                                                    <li><a href="#">Life &amp; Health Insurance</a></li>
-                                                    <li><a href="#">Renter's Insurance</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End Widget -->
-                                    </div>
-                                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
-                                        <!-- Each Widget -->
-                                        <div class="wgs wgs-footer wgs-menu">
-                                            <h5 class="wgs-title">Quick Links</h5>
-                                            <div class="wgs-content">
-                                                <ul class="menu">
-                                                    <li><a href="index-2.html">Home</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                                    <li><a href="services.html">Client Resources</a></li>
-                                                    <li><a href="news.html">Our Blog</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End Widget -->
-                                    </div>
-                                    <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
-                                        <!-- Each Widget -->
-                                        <div class="wgs wgs-footer">
-                                            <h5 class="wgs-title">Proudly Serving</h5>
-                                            <div class="wgs-content">
-                                                <ul>
-                                                    <li>Brooklyn, NY</li>
-                                                    <li>Bushwick, NY</li>
-                                                    <li>Long Beach, CA</li>
-                                                    <li>Los Alamitos, CA</li>
-                                                    <li>New Jersey, NJ</li>
-                                                    <li>Florida, FL</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End Widget -->
-                                    </div>
-                                    <div class="footer-col col-md-3 col-sm-6">
-                                        <!-- Each Widget -->
-                                        <div class="wgs wgs-footer">
-                                            <div class="wgs-content">
-                                                <div class="footer-logo"><img src="image/logo.png" srcset="image/logo2x.png 2x" alt=""></div>
-                                                <ul class="contact-info">
-                                                    <li>
-                                                        <span>Toll Free</span>: 800-123-5689<br>
-                                                        <span>Phone</span>: 781-123-9865
-                                                    </li>
-                                                    <li><span>Fax</span>: 781-123-0011</li>
-                                                    <li>
-                                                        34 South Franklin Road <br>
-                                                        Santa Ana, CA 8975, USA.
-                                                    </li>
-                                                </ul>
-                                                <ul class="social social-v2">
-                                                    <li><a href="#"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
-                                                    <li><a href="#"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
-                                                    <li><a href="#"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End Widget -->
-                                    </div>
-                                </div><!-- Widget Row -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Footer Widget -->
-                    <!-- Copyright -->
-                    <div class="copyright">
-                        <div class="container">
-                            <div class="row">
-                                <div class="site-copy col-sm-7">
-                                    <p>Copyright &copy; 2017 Insurance Pro Inc. License #1010155 <span class="sep"> . </span> <a href="#">Privacy Policy</a> <span class="sep"> . </span> <a href="#">Sitemap</a></p>
-                                </div>
-                                <div class="site-by col-sm-5 al-right">
-                                    <p>Template Design &amp; Made <em class="fa fa-heart text-danger"></em> by <a href="http://softnio.com/" target="_blank">Softnio</a></p>
-                                </div>
-                                <div class="site-dclaim col-sm-12">
-                                    <p class="small"><strong>Disclaimer:</strong> The material on this website is for demostration purpose only and is provided denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue. These cases are perfectly simple and easy to distinguish.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDNaa8LOQISEST6NIGC78vmdnIOynR2SeU"></script>
-    <script src="@Url.Content("~/Content/insuranceTemplate/js/gmaps.js")"></script>
-                    <script src="@Url.Content("~/Content/insuranceTemplate/js/jquery.bundle.js")"></script>
-                    <script src="@Url.Content("~/Content/insuranceTemplate/js/script.js")"></script>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Content/insuranceTemplate/js/jquery.bundle.js")"></script>
+    <script src="@Url.Content("~/Content/insuranceTemplate/js/moment.min.js")"></script>
+
+    <script src="@Url.Content("~/Content/insuranceTemplate/js/fullcalendar.min.js")"></script>
+    <script src="@Url.Content("~/Content/insuranceTemplate/js/jquery.bundle.js")js/script.js"></script>
 </body>
 </html>
