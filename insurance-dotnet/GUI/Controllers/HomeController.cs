@@ -33,6 +33,7 @@ namespace GUI.Controllers
             }
             else if (a.role.Equals("admin"))
             {
+
                 Session["user"] = a;
                 return Redirect("~/Interview/IndexAdmin");
             }
