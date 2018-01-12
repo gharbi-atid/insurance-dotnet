@@ -76,7 +76,6 @@
     <Compile Include="survey.cs" />
     <Compile Include="surveyvote.cs" />
     <Compile Include="testimony.cs" />
-    <Compile Include="Tug.cs" />
     <Compile Include="user.cs" />
   </ItemGroup>
   <ItemGroup>

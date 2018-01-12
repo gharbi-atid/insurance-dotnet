@@ -50,6 +50,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.6\Assemblies\v4.0\MySql.Fabric.Plugin.dll</HintPath>
     </Reference>
+    <Reference Include="ServiceStack.Client, Version=4.5.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Client.4.5.14\lib\net45\ServiceStack.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.5.14\lib\portable-wp80+sl5+net45+win8+wpa81+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.5.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.5.14\lib\net45\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -70,9 +82,13 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="insurancedbContext.cs" />
-    <Compile Include="Migrations\201712112058527_mm1.cs" />
-    <Compile Include="Migrations\201712112058527_mm1.Designer.cs">
-      <DependentUpon>201712112058527_mm1.cs</DependentUpon>
+    <Compile Include="Migrations\201712111702150_v0.cs" />
+    <Compile Include="Migrations\201712111702150_v0.Designer.cs">
+      <DependentUpon>201712111702150_v0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712111706398_v1.cs" />
+    <Compile Include="Migrations\201712111706398_v1.Designer.cs">
+      <DependentUpon>201712111706398_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mapping\actualitycommentMap.cs" />
@@ -126,8 +142,11 @@
     <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712112058527_mm1.resx">
-      <DependentUpon>201712112058527_mm1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712111702150_v0.resx">
+      <DependentUpon>201712111702150_v0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712111706398_v1.resx">
+      <DependentUpon>201712111706398_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
